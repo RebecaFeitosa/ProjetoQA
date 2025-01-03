@@ -1,13 +1,13 @@
 # Escrevi o bdd (na pasta de bdd no arquivo de login), depois dei o comando 'cucumber' no terminal para gerar as chaves automáticas dos steps e colei elas abaixo
-Dado('que loguei') do
+Dado('que o usuario queira se logar') do
     visit ''
     sleep 5
-    end
-  
-  Quando('eu Logar') do
+end
 
-    end
+Quando('ele digitar as credenciais validas') do
   
-  Entao('logaremos') do
+end
+
+Entao('deve acessar o site com sucesso') do
   
-    end
+end
