@@ -10,3 +10,16 @@ end
 Entao('deve acessar o site com sucesso') do
     home.checkLoginSuccessful
 end
+
+
+Dado('que o usuario tente logar sem digitar a senha') do
+    
+  end
+  
+  Quando('ele digitar as credenciais invalidas') do
+    
+  end
+  
+  Entao('uma mensagem informando o erro deve aparecer') do
+    
+  end
