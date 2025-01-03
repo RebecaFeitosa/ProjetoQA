@@ -1,15 +1,12 @@
-# Escrevi o bdd (na pasta de bdd no arquivo de login), depois dei o comando 'cucumber' no terminal para gerar as chaves automáticas dos steps e colei elas abaixo
+
 Dado('que o usuario queira se logar') do
-    visit ''
-    sleep 5
+    login.load  # Carregar a página
 end
 
 Quando('ele digitar as credenciais validas') do
-    @test = LoginPage.new
-    @test.userLogin
+    login.userLogin(CREDENTIAL[:user][:email], CREDENTIAL[:user][:password])
 end
 
 Entao('deve acessar o site com sucesso') do
-    @home = HomePage.new
-    @home.checkLoginSuccessful
+    home.checkLoginSuccessful
 end

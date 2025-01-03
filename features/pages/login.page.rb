@@ -1,15 +1,16 @@
 # Usando a página de login do LinkedIn
-# Criar uma classe para a página de login
+
 class LoginPage < SitePrism::Page
 
+    set_url ''
     element :emailField, :id, "username"
     element :passwordField, :id, "password"
-    element :loginButton, :button, "Entrar" # Na aula o professor colocou o xpatch, mas deu erro para mim, então fiz dessa forma
+    element :loginButton, :button, "Entrar"
 
     # Método para realizar o login
-    def userLogin
-        emailField.set "Seu email"
-        passwordField.set "Sua senha"
+    def userLogin(email, password)
+        emailField.set (email)
+        passwordField.set (password)
         loginButton.click
     end
 
