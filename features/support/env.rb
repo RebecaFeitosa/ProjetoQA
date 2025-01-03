@@ -2,8 +2,10 @@ require 'capybara'
 require 'capybara/cucumber'
 require 'capybara/rspec'
 require 'site_prism'
+require 'site_prism/all_there'
 require 'rspec'
 require 'rspec/expectations'
+include RSpec::Matchers     # Isso permite que você use as expressões de comparação e verificação do RSpec em qualquer lugar do projeto
 
 # Inicializando as configurações padrões do capybara e relacionando a variável config as configurações do capybara
 Capybara.configure do |config|
