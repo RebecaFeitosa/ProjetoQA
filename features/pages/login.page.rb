@@ -6,6 +6,7 @@ class LoginPage < SitePrism::Page
     element :emailField, :id, "username"
     element :passwordField, :id, "password"
     element :loginButton, :button, "Entrar"
+    element :emptyPassword, :id, "error-for-password"
 
     # Método para realizar o login
     def userLogin(email, password)
@@ -13,5 +14,10 @@ class LoginPage < SitePrism::Page
         passwordField.set (password)
         loginButton.click
     end
+
+    def checkInvalidUser
+        expect(emptyPassword.text).to eql "Insira uma senha."
+    end
+
 
 end
